@@ -53,11 +53,11 @@ From a browser navigate to the [installation page](https://code.visualstudio.com
 
 1. Run the installer and modify the *Select Additional Tasks* to allow VSCode to interact from Windows Explorer:
 
-   ![lab1_1](C:\Users\gadams\github\workshop-ess-alexa-controller-device\docs\lab1_1.png)
+   ![lab1_1](/lab1_1.png)
 
 1. Launch VSCode. There is good chance you will need to upgrade (look for a small blue icon in the lower left where the settings :gear: icon is located.
 
-   ![lab1_2](C:\Users\gadams\github\workshop-ess-alexa-controller-device\docs\lab1_2.png)
+   ![lab1_2](/lab1_2.png)
 
 </p></details>
 
@@ -73,14 +73,14 @@ All development will use the Python 3 language and some additional packages (mod
 
 1. Run the installer:
 
-   ![lab1_1](C:\Users\gadams\github\workshop-ess-alexa-controller-device\docs\lab1_3.png)
+   ![lab1_1](lab1_3.png)
 
    1. Select *Add Python 3.7 to PATH*
    2. Click *Install Now*
 
 1. Click the *Disable path length limit**:
 
-   ![lab1_4](C:\Users\gadams\github\workshop-ess-alexa-controller-device\docs\lab1_4.png)
+   ![lab1_4](lab1_4.png)
 
 1. Once VSCode has restarted, you can verify python is running by creating a terminal `CTRL-SHIFT-~` and typing `python` at the prompt:
 
@@ -101,14 +101,14 @@ All development will use the Python 3 language and some additional packages (mod
 
 1. Run the installer:
 
-   ![lab1_1](C:\Users\gadams\github\workshop-ess-alexa-controller-device\docs\lab1_3.png)
+   ![lab1_1](lab1_3.png)
 
    1. Select *Add Python 3.7 to PATH*
    2. Click *Install Now*
 
 1. Click the *Disable path length limit**:
 
-   ![lab1_4](C:\Users\gadams\github\workshop-ess-alexa-controller-device\docs\lab1_4.png)
+   ![lab1_4](lab1_4.png)
 
 1. Once VSCode has restarted, you can verify python is running by creating a terminal `CTRL-SHIFT-~` and typing `python` at the prompt:
 
