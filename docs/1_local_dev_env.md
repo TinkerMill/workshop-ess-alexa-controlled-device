@@ -53,11 +53,11 @@ From a browser navigate to the [installation page](https://code.visualstudio.com
 
 1. Run the installer and modify the *Select Additional Tasks* to allow VSCode to interact from Windows Explorer:
 
-   ![lab1_1](/lab1_1.png)
+   ![lab1_1](lab1_1.png)
 
 1. Launch VSCode. There is good chance you will need to upgrade (look for a small blue icon in the lower left where the settings :gear: icon is located.
 
-   ![lab1_2](/lab1_2.png)
+   ![lab1_2](lab1_2.png)
 
 </p></details>
 
