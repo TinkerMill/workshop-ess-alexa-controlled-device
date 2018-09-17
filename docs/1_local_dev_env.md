@@ -45,6 +45,9 @@ Here are the common terms used, location will be dependent upon Windows or macOS
 
 From a browser navigate to the [installation page](https://code.visualstudio.com/download) for Microsoft Visual Studio Code (VSCode) and download and run the installer locally. This will install VSCode and make it available to launch from your Applications list.
 
+1. [Download](https://code.visualstudio.com/download) VSCode and install
+2. Run VSCode and perform any required updates
+
 <details>
 <summary><strong>VSCode Installation Instructions (exapand for details)</strong></summary>
 <p>
@@ -63,7 +66,13 @@ From a browser navigate to the [installation page](https://code.visualstudio.com
 
 ## Install Python 3
 
-All development will use the Python 3 language and some additional packages (modules) to work with your local code. If you already have Python 3.x installed, you can skip these steps. It is recommended to run Python in a virtual environment where possible. Instructions here do *not* take that into consideration.
+All development will use the Python 3 language and some additional packages (modules) to work with your local code. If you already have Python 3.x installed with pip, you can skip these steps. It is recommended to run Python in a virtual environment where possible. Instructions here do *not* take that into consideration.
+
+:exclamation: If you think you already have some version of Python 3 installed, ask for assistance to ensure the commands below do not affect you existing projects and environment.
+
+1. [Download](https://www.python.org/downloads/) Python 3.7 for your operating system
+2. Install and add the Python directory to your path
+3. Test and ensure `python3` runs with the correct version
 
 <details>
 <summary><strong>Install Python 3 for Windows (exapand for details)</strong></summary>
@@ -97,33 +106,74 @@ All development will use the Python 3 language and some additional packages (mod
 <summary><strong>Install Python 3 for macOS (exapand for details)</strong></summary>
 <p>
 
-1. Download the Python 3.7.0  installer package [from the main download page](https://www.python.org/downloads/), [64-bit is recommended - direct link](https://www.python.org/ftp/python/3.7.0/python-3.7.0-amd64.exe)
+1. Download the Python 3.7.0  installer package [from the main download page](https://www.python.org/downloads/)
 
-1. Run the installer:
+1. Run the installer and take off of the defaults. At the end, a Finder window will open. **If this is your first installation of Python 3, double-click the `Update Shell Profile.command` document.**
 
-   ![lab1_1](lab1_3.png)
+1. Restart VSCode and verify python is running by creating a terminal ``CTRL-SHIFT-` `` and typing `python3` at the prompt:
 
-   1. Select *Add Python 3.7 to PATH*
-   2. Click *Install Now*
-
-1. Click the *Disable path length limit**:
-
-   ![lab1_4](lab1_4.png)
-
-1. Once VSCode has restarted, you can verify python is running by creating a terminal `CTRL-SHIFT-~` and typing `python` at the prompt:
-
-   ```powershell
-   C:\tm_iot>python
-   Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)] on win32
+   ```bash
+   $ python3
+   Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 26 2018, 23:26:24)
+   [Clang 6.0 (clang-600.0.57)] on darwin
    Type "help", "copyright", "credits" or "license" for more information.
-   >>>
+   >>> ^D
+   $
    ```
 
 </p></details>
 
 ## Install Serial Driver
 
+To flash and communicate with the MCU, a serial driver needs to be installed. This is different process for Windows and macOS. Once completed you will note the communication port used.
 
+1. [Download](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) the SiLabs CP210x driver for your operating system
+1. Once installed, connect the MCU with the USB cable
+1. Open your Device Settings for the new COMx port (Windows) or an new `/dev/cu.*` device
+1. Note this value in a new scratch document
+
+<details>
+<summary><strong>Install serial driver for Windows (exapand for details)</strong></summary>
+<p>
+
+1. [Download](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) the SiLabs CP210x driver for your version of Windows
+
+1. GAA - install driver
+1. open device management
+1. note serial ports
+1. connect MCU
+1. note new serial port and save
+
+</p></details>
+
+<details>
+<summary><strong>Install serial driver for macOS (exapand for details)</strong></summary>
+<p>
+
+1. [Download](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) the SiLabs CP210x driver for your version of macOS
+
+1. Run the installer and take all the defaults
+
+   :exclamation: For newer versions of macOS, you may have to go into *System Preferences->Security & Privacy->General* and click to allow the driver to have access
+
+1. Open a terminal and lis the current devices:
+
+   ```bash
+   $ ls /dev/cu.*
+   /dev/cu.Bluetooth-Incoming-Port
+   $
+   ```
+
+1. Now connect the MCU and perform the same listing:
+
+   ```bash
+   $ ls /dev/cu.*
+   /dev/cu.Bluetooth-Incoming-Port	/dev/cu.SLAB_USBtoUART
+   ```
+
+1. Note new serial port (in this example `/dev/cu.SLAB_USBtoUART`) and save.
+
+</p></details>
 
 ## Install Platformio
 
