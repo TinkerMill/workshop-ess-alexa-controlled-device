@@ -136,13 +136,23 @@ To flash and communicate with the MCU, a serial driver needs to be installed. Th
 <summary><strong>Install serial driver for Windows (exapand for details)</strong></summary>
 <p>
 
-1. [Download](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) the SiLabs CP210x driver for your version of Windows
+1. [Download](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) the SiLabs CP210x driver for your version of Windows:
 
-1. GAA - install driver
-1. open device management
-1. note serial ports
-1. connect MCU
-1. note new serial port and save
+   ![lab1_5](lab1_5.png)
+
+1. Unzip and run the `CP210xVCPInstaller_x64.exe` installer
+
+1. Right-click on the Windows Icon and select *Device Manager*
+
+1. Expand the Ports (COM & LPT) section and note current ports:
+
+   ![lab1_6](lab1_6.png)
+
+1. Connect MCU and once it refreshes, note the COMx number (in this example, COM8):
+
+   ![lab1_7](lab1_7.png)
+
+1. Save the COM number value for later use.
 
 </p></details>
 
@@ -171,7 +181,7 @@ To flash and communicate with the MCU, a serial driver needs to be installed. Th
    /dev/cu.Bluetooth-Incoming-Port	/dev/cu.SLAB_USBtoUART
    ```
 
-1. Note new serial port (in this example `/dev/cu.SLAB_USBtoUART`) and save.
+1. Note new serial port (in this example `/dev/cu.SLAB_USBtoUART`) and save for later use.
 
 </p></details>
 
@@ -180,6 +190,10 @@ To flash and communicate with the MCU, a serial driver needs to be installed. Th
 
 
 ## Install / Configure Serial Terminal
+
+
+
+## Install Ngrok
 
 
 
