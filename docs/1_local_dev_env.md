@@ -187,15 +187,61 @@ To flash and communicate with the MCU, a serial driver needs to be installed. Th
 
 ## Install Platformio
 
+The MCU development environment is supported by [Platformio](https://platformio.org/). This will install an extension to VSCode and the development tools to compile and flash the code to the MCU. There is no need to create or log into a Platformio account.
 
+1. Navigate to the [download site for VSCode](https://platformio.org/install/ide?install=vscode) and follow the instructions to install the extension.
+2. Ensure the House icon is in the lower left portion of the bottom status bar in VSCode.
+3. Bookmark the Quick Start guide, which has tutorials and other details on the extension.
+
+You will configure the project location in a later lab.
 
 ## Install / Configure Serial Terminal
 
+Some of the labs will use the command line interface (CLI) to operate. The default programs for Windows (Command Line or PowerShell) and macOS (Terminal) are sufficient.
 
+1. Make sure you can launch a terminal session and navigate between directories.
 
 ## Install Ngrok
 
+Ngrok is used to provide a secure, reverse proxy from the Internet to a running application. Download and place the executable where you can run it from the command line:
 
+1. [Download](https://ngrok.com/download)  and unzip for your operating system
+1. Create a directory in your project folder called `bin` and place the executable there
+1. Add the `bin` directory to your PATH, and verify you can execute from another directory
+
+<details>
+<summary><strong>Install ngrok for Windows (exapand for details)</strong></summary>
+<p>
+
+1. Download the zip file and expand in your default Downloads location
+2. Create the bin directory in `C:\tm_iot` (e.g., `C:\tm_iot\bin`)
+3. Move the unzipped ngrok file to `C:\tm_iot\bin`
+4. Add the directory to the system PATH
+
+   1. Right click Windows icon and select *System*
+   2. In the *Find a setting* box, type `path` and select the *Edit the system variables* option
+   3. Click *Environment Variables...* and in the low box double-click the *Path* variable
+   4. Click *New* and enter `C:\tm_iot\bin` then click *OK*->*OK*->*OK* and close the settings window
+   5. Open a terminal session and type `ngrok` and press *enter*. You should see a description on how to run the program.
+
+</p></details>
+
+<details>
+<summary><strong>Install ngrok for macOS (exapand for details)</strong></summary>
+<p>
+
+1. Download the zip file and expand in your default Downloads location
+2. Create the bin directory in `C:\tm_iot` (e.g., `~/tm_iot/bin`)
+3. Move the unzipped ngrok file to `~/tm_iot/bin`
+4. Add the directory to your PATH
+
+   1. Modify ~/.bash_profile
+   2. In the *Find a setting* box, type `path` and select the *Edit the system variables* option
+   3. Click *Environment Variables...* and in the low box double-click the *Path* variable
+   4. Click *New* and enter `C:\tm_iot\bin` then click *OK*->*OK*->*OK* and close the settings window
+   5. Open a terminal session and type `ngrok` and press *enter*. You should see a description on how to run the program.
+
+</p></details>
 
 ## Verify Amazon Developer Account
 
