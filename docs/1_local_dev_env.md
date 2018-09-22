@@ -199,6 +199,8 @@ You will configure the project location in a later lab.
 
 Some of the labs will use the command line interface (CLI) to operate. The default programs for Windows (Command Line or PowerShell) and macOS (Terminal) are sufficient.
 
+:bulb: **Pro Tip**: VSCode also has a built-in terminal for both Windows and MacOS. *Terminal*->*New Terminal*.
+
 1. Make sure you can launch a terminal session and navigate between directories.
 
 ## Install Ngrok
@@ -243,15 +245,61 @@ Ngrok is used to provide a secure, reverse proxy from the Internet to a running 
 
 </p></details>
 
-## Verify Amazon Developer Account
+## Install git Version Control
 
+To work with this GitHub repository, you need the git version control tool. Download, install, and verify that the command `git` works properly from a terminal session.
 
+1. Navigate to the [git website](https://git-scm.com/download) and download git for your operating system
+2. Install git and note the location if provided
+3. Open a terminal and run the command `git`
+4. If git is not found, add the PATH location in the same manner as grok above
+
+## Create/Verify Amazon Developer Account
+
+In order to program and host the Alexa skill, an Amazon developer account is required. This is the same as your Amazon account used for shopping on the amazon.com site.
+
+![lab1_8](lab1_8.png)
+
+1. Navigate to the [developer site](https://developer.amazon.com/) on a new browser tab or window
+2. Login with your amazon account, or create a new one
+3. For initial developer access, complete *Profile information details*, accept the *App Distribution Agreement*, accept the *Payments* defaults
+4. Navigate to the [Alexa developer console](https://developer.amazon.com/alexa/console/ask)
 
 ## Create CloudMQTT Account
 
+Communication between the MCU and the Alexa skill will utilize the MQTT protocol. To securely do this, you will use a cloud-based MQTT broker, CloudMQTT.
 
+1. Navigate to [CloudMQTT](https://developer.amazon.com/alexa/console/ask)
+2. Scroll to the bottom and select the Cute Cat free plan and click Get Now
+3. Create an account and verify the email link
+4. Once logged in, create a new Cute Cat plan and navigate to the Instances list
+5. Record the *Server*, *User*, *Password* and *SSL Port* details
+
+<details>
+<summary><strong>Create CloudMQTT Account and Instance (exapand for details)</strong></summary>
+<p>
+
+1. Navigate to [CloudMQTT](https://developer.amazon.com/alexa/console/ask) on a new browser tab or window
+2. Scroll to the bottom and select the Cute Cat free plan and click Get Now
+3. Create an account and verify the email link
+4. Create *New Instance and complete*:
+
+   1. Select a plan and name:
+      * **Name**: TinkerMill Workshop
+      * **Plan**: Cute Cat (Free)
+   2. Click *Select Region* and then select *Confirm*
+   3. Record the *Server*, *User*, *Password* and *SSL Port* details for use in the applications
+
+
+</p></details>
 
 ## Clone GitHub Repository
 
+The final laptop setup process is to clone the repository to the workshop directory using git. When done, you will have the latest files (including this documentation) within the `tm_iot` directory.
 
+1. Open a terminal and change directory to `tm_iot` (`C:\tm_iot` or `~/tm_iot` for Windows/macOS, respective)
+2. Run the command to clone the directory: `git clone --depth=1 https://github.com/TinkerMill/workshop-ess-alexa-controlled-device.git`
+3. Verify the directory `workshop-ess-alexa-controlled-device` exists and has content
+
+Awesome! At this point you have installed all the basic software for the rest of the labs! It is common that since you are using a personal laptop, some of the instructions above may not be needed, may conflict, or may not work as expected. If steps don't seem to work properly, ask for assistance from others in the class or the workshop presenter.
 
