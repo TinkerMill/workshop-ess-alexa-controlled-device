@@ -54,7 +54,7 @@ This section references the workshop labs. Each lab will build upon the previous
 
 Upon completion a local editor, development tools, and clone of this repository will be setup locally on your laptop. Also, you will have verified all web sites and developer accounts needed.
 
-### 2 - Local LED Toggle
+### [2 - Local LED Toggle](docs/2_local_led.md)
 
 Upon completion you will have programmed your development board to toggle the LED when pressing the user button.
 

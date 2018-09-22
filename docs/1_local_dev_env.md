@@ -11,14 +11,14 @@ In order to keep track of the various downloads, compiled code, etc., it is best
 Here are the common terms used, location will be dependent upon Windows or macOS, each which have their own section below.
 
 * **Download Directory** - The default location where files are downloaded from your web browser. Please clear out this directory, or make a subdirectory and move all previous downloads to that, to make it easier to track and find the downloads for this lab.
-* **BASE_DIR** - This is the base, or top level, of all the files you will clone from GitHub. Please place this as close to the top of your directory structure as possible.
+* **BASE_DIR** - This is the base, or top level, of all the files you will clone from GitHub. Please place this as close to the top of your directory structure as possible. For all references, either `C:\tm_iot` (Windows) or `~/tm_iot` (macOS/Linux) will be used. Please adjust according to your actual location.
 
 <details>
 <summary><strong>Windows laptop setup (exapand for details)</strong></summary>
 <p>
 
 * **Download Directory** - Make sure you can open a Windows Explorer to this location and clean out or stash the existing files. You will have to navigate to this later.
-* **BASE_DIR** - It is recommended to place this at the root of your C:\ drive, and name it `tm_iot`.
+* **BASE_DIR** - It is recommended to place this at the root of your C:\ drive, and name it `tm_iot` (e.g, `C:\tm_iot`).
 * **How to add commands to your PATH** - [Here is a web page](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/) that goes through this process. Please open or reference if needed.
 
 </p></details>
