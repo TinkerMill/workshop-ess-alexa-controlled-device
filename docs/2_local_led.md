@@ -79,4 +79,21 @@ The quickest is to follow the build, flash, monitor process is to use the Platfo
 
 ## Uploading and Monitor Code
 
-The process of uploading (flashing) the code to the MCU stores it in a location that when the MCU is powered up or reset, loads and executes the code. If you take a look at the `main.c` code, there are two main things that happening. The first is a loop that runs 10 times then restart the MCU. Within that loop, depending if the iteration is odd or even, the connected LED is turned on or off, and an output statement is sent 
+The process of uploading (flashing) the code to the MCU stores it in a location that when the MCU is powered up or reset, loads and executes the code. If you take a look at the `main.c` code, there are two main things that happening. The first is a loop that runs 10 times then restart the MCU. Within that loop, depending if the iteration is odd or even, the connected LED is turned on or off, and an output statement is sent to the serial port.
+
+1. Connect, or verify that the MCU is connected and the port is active (per lab 1).
+2. Click the *Upload* icon to start the upload process
+3. As with the build process, monitor the status in the terminal window and that the `[SUCCESS]` message appears
+
+At this point, the LED connected to the MCU should be toggling between on and off every second. to verify, you will use the monitor serial function to look at the output of the `printf` statements.
+
+4. Click the Monitor Serial icon to see the output of the MCU code.
+5. By default the terminal is set at 9600 baud while the MCU is outputting at 115,200 baud. To correct, click inside the Terminal pane to set focus, the type CTRL-T followed by `b` to bring up the prompt to enter a new baud rate. Here enter `115200` and press return/enter.
+6. At this point you should see the details of the MCU detailed output. Look for the *Turning LED on|off* lines.
+
+:bulb: Every time you use the Monitor Serial command you will have to manually select the correct baud rate. You can change the default baud rate by adding the following line to the `platformio.ini` file, within the `[env:esp32dev]` section:
+
+​	GAA_baud_rate command
+
+Restart VSCode and the new baud rate will take affect.
+
