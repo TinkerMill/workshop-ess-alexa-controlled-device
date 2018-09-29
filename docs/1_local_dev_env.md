@@ -1,4 +1,4 @@
-# Lab 1: Local Development Environment
+# Module 1: Local Development Environment
 
 Upon completion a local editor, development tools, and clone of this repository will be setup locally on your laptop. Also, you will have verified all web sites and developer accounts needed.
 
@@ -10,7 +10,7 @@ In order to keep track of the various downloads, compiled code, etc., it is best
 
 Here are the common terms used, location will be dependent upon Windows or macOS, each which have their own section below.
 
-* **Download Directory** - The default location where files are downloaded from your web browser. Please clear out this directory, or make a subdirectory and move all previous downloads to that, to make it easier to track and find the downloads for this lab.
+* **Download Directory** - The default location where files are downloaded from your web browser. Please clear out this directory, or make a subdirectory and move all previous downloads to that, to make it easier to track and find the downloads for this module.
 * **BASE_DIR** - This is the base, or top level, of all the files you will clone from GitHub. Please place this as close to the top of your directory structure as possible. For all references, either `C:\tm_iot` (Windows) or `~/tm_iot` (macOS/Linux) will be used. Please adjust according to your actual location.
 
 <details>
@@ -56,11 +56,11 @@ From a browser navigate to the [installation page](https://code.visualstudio.com
 
 1. Run the installer and modify the *Select Additional Tasks* to allow VSCode to interact from Windows Explorer:
 
-   ![lab1_1](lab1_1.png)
+   ![mod1_1](mod1_1.png)
 
 1. Launch VSCode. There is good chance you will need to upgrade (look for a small blue icon in the lower left where the settings :gear: icon is located.
 
-   ![lab1_2](lab1_2.png)
+   ![mod1_2](mod1_2.png)
 
 </p></details>
 
@@ -82,14 +82,14 @@ All development will use the Python 3 language and some additional packages (mod
 
 1. Run the installer:
 
-   ![lab1_1](lab1_3.png)
+   ![mod1_1](mod1_3.png)
 
    1. Select *Add Python 3.7 to PATH*
    2. Click *Install Now*
 
-1. Click the *Disable path length limit**:
+1. Click the *Disable path length limit*:
 
-   ![lab1_4](lab1_4.png)
+   ![mod1_4](mod1_4.png)
 
 1. Once VSCode has restarted, you can verify python is running by creating a terminal `CTRL-SHIFT-~` and typing `python` at the prompt:
 
@@ -138,7 +138,7 @@ To flash and communicate with the MCU, a serial driver needs to be installed. Th
 
 1. [Download](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) the SiLabs CP210x driver for your version of Windows:
 
-   ![lab1_5](lab1_5.png)
+   ![mod1_5](mod1_5.png)
 
 1. Unzip and run the `CP210xVCPInstaller_x64.exe` installer
 
@@ -146,11 +146,11 @@ To flash and communicate with the MCU, a serial driver needs to be installed. Th
 
 1. Expand the Ports (COM & LPT) section and note current ports:
 
-   ![lab1_6](lab1_6.png)
+   ![mod1_6](mod1_6.png)
 
 1. Connect MCU and once it refreshes, note the COMx number (in this example, COM8):
 
-   ![lab1_7](lab1_7.png)
+   ![mod1_7](mod1_7.png)
 
 1. Save the COM number value for later use.
 
@@ -193,11 +193,11 @@ The MCU development environment is supported by [Platformio](https://platformio.
 2. Ensure the House icon is in the lower left portion of the bottom status bar in VSCode.
 3. Bookmark the Quick Start guide, which has tutorials and other details on the extension.
 
-You will configure the project location in a later lab.
+You will configure the project location in a later module.
 
 ## Install / Configure Serial Terminal
 
-Some of the labs will use the command line interface (CLI) to operate. The default programs for Windows (Command Line or PowerShell) and macOS (Terminal) are sufficient.
+Some of the modules will use the command line interface (CLI) to operate. The default programs for Windows (Command Line or PowerShell) and macOS (Terminal) are sufficient.
 
 :bulb: **Pro Tip**: VSCode also has a built-in terminal for both Windows and MacOS. *Terminal*->*New Terminal*.
 
@@ -258,7 +258,7 @@ To work with this GitHub repository, you need the git version control tool. Down
 
 In order to program and host the Alexa skill, an Amazon developer account is required. This is the same as your Amazon account used for shopping on the amazon.com site.
 
-![lab1_8](lab1_8.png)
+![mod1_8](mod1_8.png)
 
 1. Navigate to the [developer site](https://developer.amazon.com/) on a new browser tab or window
 2. Login with your amazon account, or create a new one
@@ -301,5 +301,5 @@ The final laptop setup process is to clone the repository to the workshop direct
 2. Run the command to clone the directory: `git clone --depth=1 https://github.com/TinkerMill/workshop-ess-alexa-controlled-device.git`
 3. Verify the directory `workshop-ess-alexa-controlled-device` exists and has content
 
-Awesome! At this point you have installed all the basic software for the rest of the labs! It is common that since you are using a personal laptop, some of the instructions above may not be needed, may conflict, or may not work as expected. If steps don't seem to work properly, ask for assistance from others in the class or the workshop presenter.
+Awesome! At this point you have installed all the basic software for the rest of the modules! It is common that since you are using a personal laptop, some of the instructions above may not be needed, may conflict, or may not work as expected. If steps don't seem to work properly, ask for assistance from others in the class or the workshop presenter.
 

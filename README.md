@@ -42,12 +42,12 @@ Depending upon the workshop presenter, some or all of the hardware may be provid
 
 As you will be installing, compiling, and running code on your laptop, is it recommended to use a recent laptop with sufficient disk space and CPU/memory.
 
-## Labs
+## Modules
 
-This section references the workshop labs. Each lab will build upon the previous ones, so please make sure you have completed the *Success* section of each lab before moving on to the next. All labs are structured as follows:
+This section references the workshop modules. Each module will build upon the previous ones, so please make sure you have completed the *Success* section of each module before moving on to the next. All modules are structured as follows:
 
-* Discrete - Each lab is a separate document. It is recommended to open the lab into a new tab.
-* Comprehension - The steps of each lab are designed to teach you something new. Look for the light bulb icons, :bulb:, for explanations of *why* you performed the steps, and *what* that achieves.
+* Discrete - Each module is a separate document. It is recommended to open the module into a new tab.
+* Comprehension - The steps of each module are designed to teach you something new. Look for the light bulb icons, :bulb:, for explanations of *why* you performed the steps, and *what* that achieves.
 * Summary and Verbose - Each section or sub-section will have a concise set of steps to follow for those that are familiar with the steps, and also a detailed step-by-step process.
 
 ### [1 - Local Development Environment](docs/1_local_dev_env.md)
@@ -72,7 +72,7 @@ Upon completion, either through the console interface or through an Echo device,
 
 ### 6 - Skill Function - Controlling the LED
 
-In this final lab step, you will make the final adjustments to interact with your MCU via Alexa, and control the LED.
+In this final module step, you will make the final adjustments to interact with your MCU via Alexa, and control the LED.
 
 ## Reference
 
@@ -96,7 +96,7 @@ This is for the meetup page registration.
   * Work with a small microcontroller hardware and program it
   * Use your Skill to communicate with the controller over the Internet
   
-  This three hour course will start with a session covering the main topics and then a series of labs you will complete in the workshop:
+  This three hour course will start with a session covering the main topics and then a series of modules you will complete in the workshop:
   
   * Setting up your laptop for both Alexa skills development and programming the microcontroller
   * How to structure an Alexa Skill using the Amazon Developer Console

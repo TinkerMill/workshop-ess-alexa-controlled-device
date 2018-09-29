@@ -2,11 +2,11 @@
 
 
 
-# Lab 2: Local LED Toggle
+# Module 2: Local LED Toggle
 
-Upon completion you will have programmed your development board to toggle the LED when pressing the user button. This lab covers the basics of how to work with code on your laptop, and then compile, flash, and test on the MCU (development board).
+Upon completion you will have programmed your development board to toggle the LED when pressing the user button. This module covers the basics of how to work with code on your laptop, and then compile, flash, and test on the MCU (development board).
 
-This lab covers:
+This module covers:
 
 * Opening a PlatformIO project within VSCode
 * Making small changes to the project code
@@ -14,7 +14,7 @@ This lab covers:
 
 ## Setup Hardware
 
-For the workshop labs, the ESP32 DevKit-C is placed in a breadboard, and an LED connected to a GPIO pin. When completed, the setup should look like this:
+For the workshop modules, the ESP32 DevKit-C is placed in a breadboard, and an LED connected to a GPIO pin. When completed, the setup should look like this:
 
 INSERT IMAGE OF COMPLETE KIT
 
@@ -43,7 +43,7 @@ Using Platformio from inside of VSCode, create a new project for the ESP32. This
 
 At this the default settings for a new project will have been created, and a folder added in the Explorer pane called *hello_world*.
 
-![lab2_1](lab2_1.png)
+![mod2_1](mod2_1.png)
 
 :exclamation: If the folder does not get added automatically, right-click in the Explorer pane and select *Add Folder to Workspace...,* navigate to the `tm_iot` and select the `hello_world` folder and click *Add*.
 
@@ -51,19 +51,19 @@ At this the default settings for a new project will have been created, and a fol
 
 ## Copy and Compile Code
 
-Copy (not move) the file `tm_iot/workshop-ess-alexa-controlled-device/code/lab_2-hello_world_led/main.c` to the project folder: `tm_iot/hello_world/src/main.c`, which will update to show the source file:
+Copy (not move) the file `tm_iot/workshop-ess-alexa-controlled-device/code/lod_2-hello_world_led/main.c` to the project folder: `tm_iot/hello_world/src/main.c`, which will update to show the source file:
 
-![lab2_2](lab2_2.png)
+![mod2_2](mod2_2.png)
 
-:bulb:When referenced in other labs, follow the same process to copy and replace code in the different projects.
+:bulb:When referenced in other modules, follow the same process to copy and replace code in the different projects.
 
 The normal development process is:
 
-​	write code -> build (compile) -> upload (flash) -> monitor serial (debug)
+​	**write code -> build (compile) -> upload (flash) -> monitor serial (debug)**
 
 The quickest is to follow the build, flash, monitor process is to use the Platformio icons at the bottom of the VSCode window, with the project selected. You can also use the *Command Palate...* option as above, to select the Platformio operation.
 
-![lab2_4](lab2_4.png)
+![mod2_3](mod2_3.png)
 
 1. With the `main.c` open, click the Build icon to start the build process.
 
@@ -83,7 +83,7 @@ The quickest is to follow the build, flash, monitor process is to use the Platfo
 
 The process of uploading (flashing) the code to the MCU stores it in a location that when the MCU is powered up or reset, loads and executes the code. If you take a look at the `main.c` code, there are two main things that happening. The first is a loop that runs 10 times then restart the MCU. Within that loop, depending if the iteration is odd or even, the connected LED is turned on or off, and an output statement is sent to the serial port.
 
-1. Connect, or verify that the MCU is connected and the port is active (per lab 1).
+1. Connect, or verify that the MCU is connected and the port is active (per module 1).
 2. Click the *Upload* icon to start the upload process
 3. As with the build process, monitor the status in the terminal window and that the `[SUCCESS]` message appears
 
@@ -95,7 +95,17 @@ At this point, the LED connected to the MCU should be toggling between on and of
 
 :bulb: Every time you use the Monitor Serial command you will have to manually select the correct baud rate. You can change the default baud rate by adding the following line to the `platformio.ini` file, within the `[env:esp32dev]` section:
 
-​	GAA_baud_rate command
+​	`monitor_speed = 115200`
+
+It should look similar to this:
+
+```ini
+[env:esp32dev]
+platform = espressif32
+board = esp32dev
+framework = espidf
+monitor_speed = 115200
+```
 
 Restart VSCode and the new baud rate will take affect.
 
