@@ -2,38 +2,27 @@
 
 
 
-# Module 2: Local LED Toggle
+# Module 3: WiFi and MQTT
 
-Upon completion you will have programmed your development board to toggle the LED when pressing the user button. This module covers the basics of how to work with code on your laptop, and then compile, flash, and test on the MCU (development board).
+In this module, you will create the next Platformio project and configure the MCU to connect to WiFi and connect to the CloudMQTT broker to *publish* telemetry and *subscribe* for commands from the Alexa Skill.
+
+Upon completion you will have created a new Platformio application and programmed your development board to act as a smart device for your Alexa skill.
 
 This module covers:
 
-* Opening a PlatformIO project within VSCode
-* Making small changes to the project code
-* Compile/flash/monitor development process
+* Creating a new Platformio project
+* Configuring for WiFi and Internet connectivity
+* Use the on-board USER button to send a test message
+* Use the CloudMQTT console to monitor messages
+* Using the monitor to verify connections
 
-## Setup Hardware
+## Create and Configure Smart Device Application
 
-For the workshop modules, the ESP32 DevKit-C is placed in a breadboard, and an LED connected to a GPIO pin. When completed, the setup should look like this:
+Follow the procedure from module 2 to create a new Platformio application and copy the template code:
 
-INSERT IMAGE OF COMPLETE KIT
+1. Create new Platformio project and enter the following:
 
-1. Position the DevKit-C so that the pins are aligned with the breadboard holes. There should be an open set of holes next to the pin labeled (XXXX).
-2. With gentle pressure, use both thumbs to slowly press the MCU into the breadboard until it is firmly in place.
-3. With the provided LED, place the black cable into the hole next to the pin labeled XXXX. Place the colored cable into the hole next to GND.
-4. Connect the USB cable to the MCU and then to your laptop. The onboard power indicator LED will come on.
-
-## Create Platformio Local Project Hello World
-
-Using Platformio from inside of VSCode, create a new project for the ESP32. This will pre-populate the template for the board, and setup the directory structure for the firmware to be built.
-
-1. Open or navigate to VSCode
-
-2. Open *Command Palette...* (⇧-⌘-P for macOS or ⇧-CTRL-P for Windows) and type `platformio: home`and hit enter
-
-3. From the Platformio home page, select *Quick Access*->*New Project* and enter the following:
-
-   **Name**: hello_world
+   **Name**: smart_device
 
    **Board**: Espressif ESP32 Dev Module
 
@@ -41,17 +30,40 @@ Using Platformio from inside of VSCode, create a new project for the ESP32. This
 
    **Location**: Uncheck and select the `tm_iot` directory then click Finish
 
-At this the default settings for a new project will have been created, and a folder added in the Explorer pane called *hello_world*.
+This should complete almost immediately because the dependencies have been installed from the first application. You will need to add the `monitor_speed` line to the `platformio.ini` file (each project has its own file).
 
-![mod2_1](mod2_1.png)
+:exclamation: If the folder does not get added automatically, right-click in the Explorer pane and select *Add Folder to Workspace...,* navigate to the `tm_iot` and select the `smart_device` folder and click *Add*.
 
-:exclamation: If the folder does not get added automatically, right-click in the Explorer pane and select *Add Folder to Workspace...,* navigate to the `tm_iot` and select the `hello_world` folder and click *Add*.
+2. Copy the file `tm_iot/workshop-ess-alexa-controlled-device/code/mod_3-smart_device/main.c` to the project folder: `tm_iot/smart_device/src/main.c`
 
+3. This code uses an additional library. To easily include, add the following lines to the `[env:esp32dev]` section of the `platformio.ini` file:
+
+   ```ini
+   [env:esp32dev]
+   xxx = yyy
+   
+   # Add these lines to the bottom of the file
+   
+   lib_deps =
+       # Using library Id
+        5670
+   
+        # Using library Name
+        MQTT library for ESP32 (ESP-IDF)
+   
+        # Depend on specific version
+        MQTT library for ESP32 (ESP-IDF)@1.0.0
+   
+        # Semantic Versioning Rules
+        MQTT library for ESP32 (ESP-IDF)@^1.0.0
+        MQTT library for ESP32 (ESP-IDF)@~1.0.0
+        MQTT library for ESP32 (ESP-IDF)@>=1.0.0
+   ```
 
 
 ## Copy and Compile Code
 
-Copy (not move) the file `tm_iot/workshop-ess-alexa-controlled-device/code/mod_2-hello_world_led/main.c` to the project folder: `tm_iot/hello_world/src/main.c`, which will update to show the source file:
+Copy (not move) the file `tm_iot/workshop-ess-alexa-controlled-device/code/lod_2-hello_world_led/main.c` to the project folder: `tm_iot/hello_world/src/main.c`, which will update to show the source file:
 
 ![mod2_2](mod2_2.png)
 

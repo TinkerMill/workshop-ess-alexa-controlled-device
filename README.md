@@ -58,7 +58,7 @@ Upon completion a local editor, development tools, and clone of this repository 
 
 Upon completion you will have programmed your development board to toggle the LED when pressing the user button.
 
-### 3 - WiFi and IoT Connection
+### [3 - WiFi and IoT Connection](docs/3_wifi_mqtt.md)
 
 Upon completion your development board will be connected to an MQTT broker endpoint and able to send and receive messages.
 
