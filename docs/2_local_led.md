@@ -2,7 +2,7 @@
 
 
 
-# Lab 1: Local LED Toggle
+# Lab 2: Local LED Toggle
 
 Upon completion you will have programmed your development board to toggle the LED when pressing the user button. This lab covers the basics of how to work with code on your laptop, and then compile, flash, and test on the MCU (development board).
 
@@ -45,13 +45,15 @@ At this the default settings for a new project will have been created, and a fol
 
 ![lab2_1](lab2_1.png)
 
+:exclamation: If the folder does not get added automatically, right-click in the Explorer pane and select *Add Folder to Workspace...,* navigate to the `tm_iot` and select the `hello_world` folder and click *Add*.
+
 
 
 ## Copy and Compile Code
 
-Copy (not move) the file `tm_iot/workshop-ess-alexa-controlled-device/code/hello_world_led/main.c` to the project folder: `tm_iot/hello_world/src/main.c`, which will update to show the source file:
+Copy (not move) the file `tm_iot/workshop-ess-alexa-controlled-device/code/lab_2-hello_world_led/main.c` to the project folder: `tm_iot/hello_world/src/main.c`, which will update to show the source file:
 
-![lab2_2](/Users/gavinaws/github/workshop-ess-alexa-controlled-device/docs/lab2_2.png)
+![lab2_2](lab2_2.png)
 
 :bulb:When referenced in other labs, follow the same process to copy and replace code in the different projects.
 
