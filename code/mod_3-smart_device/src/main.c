@@ -22,6 +22,9 @@
 
 static const char *TAG = "MQTTWSS_SAMPLE";
 
+#define CONFIG_WIFI_SSID        "SSID Case SeNsItIvE here"
+#define CONFIG_WIFI_PASSWORD    "WIFI password here"
+
 static EventGroupHandle_t wifi_event_group;
 const static int CONNECTED_BIT = BIT0;
 
@@ -69,8 +72,8 @@ static void wifi_init(void)
     xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT, false, true, portMAX_DELAY);
 }
 
-extern const uint8_t iot_eclipse_org_pem_start[] asm("_binary_iot_eclipse_org_pem_start");
-extern const uint8_t iot_eclipse_org_pem_end[]   asm("_binary_iot_eclipse_org_pem_end");
+extern const uint8_t data_comodoaddtrustca_pem_start[] asm("_binary_data_comodoaddtrustca_pem_start");
+extern const uint8_t data_comodoaddtrustca_pem_end[]   asm("_binary_data_comodoaddtrustca_pem_end");
 
 static esp_err_t mqtt_event_handler(esp_mqtt_event_handle_t event)
 {
@@ -118,10 +121,11 @@ static esp_err_t mqtt_event_handler(esp_mqtt_event_handle_t event)
 
 static void mqtt_app_start(void)
 {
+    ESP_LOGI(TAG, "Server cert: %s", (const char *)data_comodoaddtrustca_pem_start);
     const esp_mqtt_client_config_t mqtt_cfg = {
-        .uri = "wss://iot.eclipse.org:443/ws",
+        .uri = "wss://m15.cloudmqtt.com:PORT/",
         .event_handle = mqtt_event_handler,
-        .cert_pem = (const char *)iot_eclipse_org_pem_start,
+        .cert_pem = (const char *)data_comodoaddtrustca_pem_start,
     };
 
     ESP_LOGI(TAG, "[APP] Free memory: %d bytes", esp_get_free_heap_size());
