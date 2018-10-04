@@ -1,7 +1,3 @@
-
-
-
-
 # Module 3: WiFi and MQTT
 
 In this module, you will create the next Platformio project and configure the MCU to connect to WiFi and connect to the CloudMQTT broker to *subscribe* for commands from the Alexa Skill.
