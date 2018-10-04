@@ -2,7 +2,7 @@
 
 
 
-# Module 4: Alexa Skill
+# Module 4: Alexa Skill and End-to-End
 
 In this module, you will build the Alexa Skill in the Amazon Developer console and test the *intent* programmed. The skill, locally running on your laptop, will *publish* a message to CloudMQTT to turn on, or off, the light (LED).
 
