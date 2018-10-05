@@ -21,15 +21,6 @@
 #include "mqtt_client.h"
 #include "driver/gpio.h"
 
-static const char *TAG = "SMART_DEVICE";
-
-#define CONFIG_WIFI_SSID        "SSID Case SeNsItIvE here"
-#define CONFIG_WIFI_PASSWORD    "WIFI password here"
-
-static EventGroupHandle_t wifi_event_group;
-const static int CONNECTED_BIT = BIT0;
-
-
 // **************** Set parameters here ******************
 // GPIO Pin where LED resides
 #define LED_GPIO                13
@@ -49,6 +40,10 @@ const static int CONNECTED_BIT = BIT0;
 
 // **************** Do NOT modify below ******************
 
+static const char *TAG = "SMART_DEVICE";
+
+static EventGroupHandle_t wifi_event_group;
+const static int CONNECTED_BIT = BIT0;
 
 static esp_err_t wifi_event_handler(void *ctx, system_event_t *event)
 {
@@ -189,7 +184,7 @@ static esp_err_t mqtt_event_handler(esp_mqtt_event_handle_t event)
 
 static void mqtt_app_start(void)
 {
-    ESP_LOGI(TAG, "Server cert: %s", (const char *)data_comodoaddtrustca_pem_start);
+    ESP_LOGI(TAG, "Server cert: %s", (const char *)mqtt_ca_pem_start);
     const esp_mqtt_client_config_t mqtt_cfg = {
         .uri = MQTT_URI,
         .event_handle = mqtt_event_handler,

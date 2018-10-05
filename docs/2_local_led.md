@@ -16,11 +16,16 @@ This module covers:
 
 For the workshop modules, the ESP32 DevKit-C is placed in a breadboard, and an LED connected to a GPIO pin. When completed, the setup should look like this:
 
-INSERT IMAGE OF COMPLETE KIT
+![mod2_5](mod2_5.jpg)
 
-1. Position the DevKit-C so that the pins are aligned with the breadboard holes. There should be an open set of holes next to the pin labeled (XXXX).
+1. Position the DevKit-C so that the pins are aligned with the breadboard holes. There should be an open set of holes next to the pin side labeled 5V, CMD, D3, etc.
+
 2. With gentle pressure, use both thumbs to slowly press the MCU into the breadboard until it is firmly in place.
-3. With the provided LED, place the black cable into the hole next to the pin labeled XXXX. Place the colored cable into the hole next to GND.
+
+3. With the provided LED, place the *black* cable into the hole next to the pin labeled **13**. Place the *colored* cable into the hole next to **GND**. It should look like this:
+
+   ![mod2_4](mod2_4.png)
+
 4. Connect the USB cable to the MCU and then to your laptop. The onboard power indicator LED will come on.
 
 ## Create Platformio Local Project Hello World
