@@ -62,17 +62,9 @@ Upon completion you will have programmed your development board to toggle the LE
 
 Upon completion your development board will be connected to an MQTT broker endpoint and able to send and receive messages.
 
-### 4 - Alexa Skill Configuration
+### [4 - Alexa Skill and End-to-End](docs/4_alex_skill.md)
 
-Upon completion you will have created your skill and references to locally running code.
-
-### 5 - Skill Function - Local Testing
-
-Upon completion, either through the console interface or through an Echo device, you will test the operation of your skill and locally verify the code is properly responding.
-
-### 6 - Skill Function - Controlling the LED
-
-In this final module step, you will make the final adjustments to interact with your MCU via Alexa, and control the LED.
+Upon completion you will have created your skill in the Amazon console executing code on your local laptop. That, in turn, will send the messages to control the LED on your MCU.
 
 ## Reference
 
@@ -81,7 +73,7 @@ In this final module step, you will make the final adjustments to interact with 
 This is for the meetup page registration.
 
 * Title: Create an Alexa Skill to Control You Very Own IoT Device
-* Price: $15.00 /per person
+* Price: $15.00 /per person (non-Tinkermillians)
 
    ---
 

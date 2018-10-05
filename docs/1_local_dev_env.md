@@ -123,6 +123,24 @@ All development will use the Python 3 language and some additional packages (mod
 
 </p></details>
 
+## Install Python Packages
+
+The Alexa skill is built using packages that makes the code cleaner. From the terminal inside of VSCode, run this command to install the packages that will be referenced from our Alexa skill code. For Windows:
+
+```powershell
+C:\tm_iot>pip3 install flask-ask paho-mqtt
+C:\tm_iot>pip3 install 'cryptography<2.2'
+```
+
+and for macOS:
+
+```bash
+$ pip3 install flask-ask paho-mqtt
+$ pip3 install 'cryptography<2.2'
+```
+
+:bulb: The second install is to downgrade the cryptography module to a version that is supported. Details [here](https://stackoverflow.com/questions/49375054/alexa-skill-development-using-flask-ask-and-ngrok).
+
 ## Install Serial Driver
 
 To flash and communicate with the MCU, a serial driver needs to be installed. This is different process for Windows and macOS. Once completed you will note the communication port used.
