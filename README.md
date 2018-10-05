@@ -2,7 +2,7 @@
 
 In this workshop, you will work with a small microcontroller unit (MCU), connect it to the Internet and an MQTT broker, and also configure an Alexa Skill to query and control the device. Beyond that, there are also stretch goals to augment and enhance both your thing (connected device) and the Alexa skill.
 
-**insert architecture diagram** here
+![arch1](docs/arch1.png)
 
 This is a beginner  workshop, and beyond an understanding of how to use a command line interface (CLI, Windows Command Prompt or macOS Terminal), there is no specific technical expertise required.
 
@@ -28,7 +28,7 @@ To participate in this workshop, you will need a few hardware components, along 
 * Hardware
   1. Your personal laptop - This can be Windows or macOS, with the ability to download and install the software in the Software section of the prerequisites. *Note*: Non-Windows/Mac laptops such as Chromebooks are not supported.
   2. ESP32 Microcontoller - The ESP32-DevKit-C [[Amazon]](https://www.amazon.com/Espressif-ESP32-ESP32-DEVKITC-ESP-WROOM-32-soldered/dp/B01N0SB08Q)[[Adafruit]](https://www.adafruit.com/product/3269) is a system development board with integrated Wi-Fi, Bluetooth Low Energy, and support for secure connections
-  3. LED - A pre-configred module with included cable and resistor to connect to the MCU for turning on or off the LED.
+  3. LED - A pre-configured module [[Amazon]](https://smile.amazon.com/gp/product/B01JT8ZLB6/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1) with included cable and resistor to connect to the MCU for turning on or off the LED.
   4. USB Cable - A high quality cable that provides both power and data. Please select a cable based on the ports your laptop supports such as Type-A or Type-C to [Micro USB](https://en.wikipedia.org/wiki/USB#Receptacle_(socket)_identification).
   5. Amazon Echo device (optional) - For testing (intermediate level as it requires you to create the skill within your own Amazon Developer account) skills via voice
 
@@ -36,7 +36,7 @@ Depending upon the workshop presenter, some or all of the hardware may be provid
 
 * Software on Laptop
   1. [Microsoft Visual Studio Code (VSCode)](https://code.visualstudio.com/download) - Used for the MCU development process
-  2. [PlatformIO IDE for VSCode](https://platformio.org/install/ide?install=vscode) - Follow the instructions to download and install within VSCode
+  2. [PlatformIO IDE for VSCode](https://platformio.org/install/ide?install=vscode) - A fully integrated tool to select and build embedded IoT applications
   3. [ngrok](https://ngrok.com/download) - A reverse proxy that allows access to our locally running Alexa skill
   4. Python 3
 
@@ -62,7 +62,7 @@ Upon completion you will have programmed your development board to toggle the LE
 
 Upon completion your development board will be connected to an MQTT broker endpoint and able to send and receive messages.
 
-### [4 - Alexa Skill and End-to-End](docs/4_alex_skill.md)
+### [4 - Alexa Skill and End-to-End](docs/4_alexa_skill.md)
 
 Upon completion you will have created your skill in the Amazon console executing code on your local laptop. That, in turn, will send the messages to control the LED on your MCU.
 

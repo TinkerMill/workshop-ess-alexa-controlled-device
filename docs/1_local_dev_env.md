@@ -125,21 +125,30 @@ All development will use the Python 3 language and some additional packages (mod
 
 ## Install Python Packages
 
-The Alexa skill is built using packages that makes the code cleaner. From the terminal inside of VSCode, run this command to install the packages that will be referenced from our Alexa skill code. For Windows:
+The Alexa skill is built using packages that makes the code cleaner. From the terminal inside of VSCode, run this command to install the packages that will be referenced from our Alexa skill code. The Flask-Ask package used has issues with current versions of pip, so we need to downgrade pip to install. Oh, and the cryptography modules also have issues, so yet more gyrations.
+
+For Windows:
 
 ```powershell
+# Downgrade pip from 10 or 18 to 9.0.1
+C:\tm_iot>pip3 install pip==9.0.1
+# Install required packages
 C:\tm_iot>pip3 install flask-ask paho-mqtt
-C:\tm_iot>pip3 install 'cryptography<2.2'
+# Upgrade pyOpenSSL to 18
+C:\tm_iot>pip3 install pyOpenSSL==18.0.0
 ```
 
-and for macOS:
+and for macOS :
 
 ```bash
+$ pip3 install pip==9.0.1
 $ pip3 install flask-ask paho-mqtt
-$ pip3 install 'cryptography<2.2'
+$ pip3 install install pyOpenSSL==18.0.0
 ```
 
-:bulb: The second install is to downgrade the cryptography module to a version that is supported. Details [here](https://stackoverflow.com/questions/49375054/alexa-skill-development-using-flask-ask-and-ngrok).
+:bulb: The second install is to downgrade the cryptography module to a version that is supported. Details [here](https://stackoverflow.com/questions/49375054/alexa-skill-development-using-flask-ask-and-ngrok). Proper security is hard.
+
+:exclamation: **NOTE**: Any changes or additions to other python modules may affect what was done above. This is best done in a virtual environment (virtualenv) wherever possible. 
 
 ## Install Serial Driver
 
@@ -180,11 +189,11 @@ To flash and communicate with the MCU, a serial driver needs to be installed. Th
 
 1. [Download](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) the SiLabs CP210x driver for your version of macOS
 
-1. Run the installer and take all the defaults
+1. Run the installer and take all the defaults, go slowly through the prompts because:
 
-   :exclamation: For newer versions of macOS, you may have to go into *System Preferences->Security & Privacy->General* and click to allow the driver to have access
+   :exclamation: For newer versions of macOS, you may have to go into *System Preferences->Security & Privacy->General* and click to allow the driver to have access.
 
-1. Open a terminal and lis the current devices:
+1. Open a terminal and list the current devices:
 
    ```bash
    $ ls /dev/cu.*
@@ -203,9 +212,9 @@ To flash and communicate with the MCU, a serial driver needs to be installed. Th
 
 </p></details>
 
-## Install Platformio
+## Install PlatformIO
 
-The MCU development environment is supported by [Platformio](https://platformio.org/). This will install an extension to VSCode and the development tools to compile and flash the code to the MCU. There is no need to create or log into a Platformio account.
+The MCU development environment is supported by [PlatformIO](https://platformio.org/). This will install an extension to VSCode and the development tools to compile and flash the code to the MCU. There is no need to create or log into a PlatformIO account.
 
 1. Navigate to the [download site for VSCode](https://platformio.org/install/ide?install=vscode) and follow the instructions to install the extension.
 2. Ensure the House icon is in the lower left portion of the bottom status bar in VSCode.
