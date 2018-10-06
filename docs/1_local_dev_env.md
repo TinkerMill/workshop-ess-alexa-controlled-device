@@ -277,9 +277,21 @@ Ngrok is used to provide a secure, reverse proxy from the Internet to a running 
 To work with this GitHub repository, you need the git version control tool. Download, install, and verify that the command `git` works properly from a terminal session.
 
 1. Navigate to the [git website](https://git-scm.com/download) and download git for your operating system
+
 2. Install git and note the location if provided
+
 3. Open a terminal and run the command `git`
+
 4. If git is not found, add the PATH location in the same manner as grok above
+
+5. To test, clone the [workshop](https://github.com/TinkerMill/workshop-ess-alexa-controlled-device) located on GitHub to the `tm_iot` directory:
+
+   ```bash
+   $ git clone https://github.com/TinkerMill/workshop-ess-alexa-controlled-device.git
+   $ ls
+   bin					workshop-ess-alexa-controlled-device
+   ```
+
 
 ## Create/Verify Amazon Developer Account
 
