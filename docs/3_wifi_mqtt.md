@@ -43,7 +43,7 @@ The main C code, `main.c` has values that need to be set for your specific Cloud
 
 ```c
 // Set WiFi credentials - CASE is important!
-#define CONFIG_WIFI_SSID        "Tinkermill"
+#define CONFIG_WIFI_SSID        "TinkerMill"
 #define CONFIG_WIFI_PASSWORD    "notTheActualPassword"
 ```
 
