@@ -143,7 +143,7 @@ and for macOS :
 ```bash
 $ pip3 install pip==9.0.1
 $ pip3 install flask-ask paho-mqtt
-$ pip3 install install pyOpenSSL==18.0.0
+$ pip3 install pyOpenSSL==18.0.0
 ```
 
 :bulb:These steps will leave pip at an older version. If needed you can upgrade pi once flask-ask has been installed.​ 
