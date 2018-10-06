@@ -68,9 +68,9 @@ From a browser navigate to the [installation page](https://code.visualstudio.com
 
 All development will use the Python 3 language and some additional packages (modules) to work with your local code. If you already have Python 3.x installed with pip, you can skip these steps. It is recommended to run Python in a virtual environment where possible. Instructions here do *not* take that into consideration.
 
-:exclamation: If you think you already have some version of Python 3 installed, ask for assistance to ensure the commands below do not affect you existing projects and environment.
+:exclamation: If you think you already have some version of Python 3 installed, ask for assistance to ensure the commands below do not affect you existing projects and environment. Although Python 3.7.0 is the most recent version, it is recommended to install 3.6.x due to breaking changes to crypto modules.
 
-1. [Download](https://www.python.org/downloads/) Python 3.7 for your operating system
+1. [Download](https://www.python.org/downloads/) Python 3.6.x for your operating system
 2. Install and add the Python directory to your path
 3. Test and ensure `python3` runs with the correct version
 
@@ -78,13 +78,13 @@ All development will use the Python 3 language and some additional packages (mod
 <summary><strong>Install Python 3 for Windows (exapand for details)</strong></summary>
 <p>
 
-1. Download the Python 3.7.0  installer package [from the main download page](https://www.python.org/downloads/), [64-bit is recommended - direct link](https://www.python.org/ftp/python/3.7.0/python-3.7.0-amd64.exe)
+1. Download the Python 3.6.x  installer package [from the main download page](https://www.python.org/downloads/), [64-bit is recommended - direct link](https://www.python.org/ftp/python/3.7.0/python-3.6.6-amd64.exe)
 
-1. Run the installer:
+1. Run the installer (example showing for 3.7.0, it will look similar for other versions of 3.6:
 
    ![mod1_1](mod1_3.png)
 
-   1. Select *Add Python 3.7 to PATH*
+   1. Select *Add Python 3.6.x to PATH*
    2. Click *Install Now*
 
 1. Click the *Disable path length limit*:
@@ -95,7 +95,7 @@ All development will use the Python 3 language and some additional packages (mod
 
    ```powershell
    C:\tm_iot>python
-   Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)] on win32
+   Python 3.6.6 (v3.6.6:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)] on win32
    Type "help", "copyright", "credits" or "license" for more information.
    >>>
    ```
@@ -106,7 +106,7 @@ All development will use the Python 3 language and some additional packages (mod
 <summary><strong>Install Python 3 for macOS (exapand for details)</strong></summary>
 <p>
 
-1. Download the Python 3.7.0  installer package [from the main download page](https://www.python.org/downloads/)
+1. Download the Python 3.6.6  installer package [from the main download page](https://www.python.org/downloads/)
 
 1. Run the installer and take off of the defaults. At the end, a Finder window will open. **If this is your first installation of Python 3, double-click the `Update Shell Profile.command` document.**
 
@@ -114,7 +114,7 @@ All development will use the Python 3 language and some additional packages (mod
 
    ```bash
    $ python3
-   Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 26 2018, 23:26:24)
+   Python 3.6.6 (v3.6.6:1bf9cc5093, Jun 26 2018, 23:26:24)
    [Clang 6.0 (clang-600.0.57)] on darwin
    Type "help", "copyright", "credits" or "license" for more information.
    >>> ^D
@@ -146,7 +146,7 @@ $ pip3 install flask-ask paho-mqtt
 $ pip3 install install pyOpenSSL==18.0.0
 ```
 
-:bulb: The second install is to downgrade the cryptography module to a version that is supported. Details [here](https://stackoverflow.com/questions/49375054/alexa-skill-development-using-flask-ask-and-ngrok). Proper security is hard.
+:bulb:These steps will leave pip at an older version. If needed you can upgrade pi once flask-ask has been installed.​ 
 
 :exclamation: **NOTE**: Any changes or additions to other python modules may affect what was done above. This is best done in a virtual environment (virtualenv) wherever possible. 
 
